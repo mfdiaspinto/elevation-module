@@ -1,0 +1,28 @@
+{
+  "name": "@primavera/<%= module %>",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/repo"
+  },
+  "author": {
+    "name": "<%= author %>",
+    "email": "<%= email %>"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/username/repo/issues"
+  },
+  "main": "<%= module %>.umd.js",
+  "module": "<%= module %>.js",
+  "jsnext:main": "<%= module %>.js",
+  "typings": "<%= module %>.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
