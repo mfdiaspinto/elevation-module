@@ -1,6 +1,6 @@
 {
   "name": "generator-elevation-module",
-  "version": "0.0.5-beta2",
+  "version": "0.0.5-beta3",
   "description": "Build Elevation Module",
   "main": "index.js",
   "scripts": {
