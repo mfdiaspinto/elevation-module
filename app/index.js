@@ -29,8 +29,8 @@ module.exports = class extends Generator {
     );
 
     this.fs.copyTpl(
-      this.templatePath('/src'),
-      this.destinationPath(this.answers.module + '/src'),
+      this.templatePath('src'),
+      this.destinationPath(this.answers.module + 'src'),
 			{ module: this.answers.module,
 				author :  this.answers.author,
 				email :  this.answers.email

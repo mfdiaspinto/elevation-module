@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import { PrimaveraCoreModule, PrimaveraI18nModule, I18nConfig } from '@primavera/ngcore';
 
 import { I18N_SOURCES } from './i18n/i18n.config';
+//ImportComponents
+
+//ExportComponents
+
 
 // create the i18n config
 
@@ -17,11 +21,18 @@ let i18nConfig: I18nConfig = {
     CommonModule,
     PrimaveraCoreModule.forRoot(),
     PrimaveraI18nModule.forRoot(i18nConfig)
+
+    //NemComponents
+
   ],
   declarations: [
+    //DeclarationsComponents
+
   ], entryComponents: [
+      
   ],
   exports: [
+    //ModuleExportComponents
   ]
 })
 export class <%= module %>Module {
