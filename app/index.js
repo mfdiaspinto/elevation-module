@@ -39,7 +39,7 @@ module.exports = class extends Generator {
 
 
     this.fs.copy(
-      this.templatePath('src/index.ts'),
+      this.templatePath('src/_index.ts'),
       this.destinationPath(this.answers.module +'/src/index.ts')
     );
 
