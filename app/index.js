@@ -37,12 +37,7 @@ module.exports = class extends Generator {
 			} // user answer `title` used
     );*/
 
-    this.fs.copy(
-      this.templatePath('src'),
-      this.destinationPath(this.answers.module +'/src')
-    );
-
-    this.fs.copy(
+    /*this.fs.copy(
       this.templatePath('src/_index.ts'),
       this.destinationPath(this.answers.module +'/src/index.ts')
     );
@@ -80,7 +75,7 @@ module.exports = class extends Generator {
     this.fs.copy(
       this.templatePath('src/i18n/pt-pt/resources.components.lang.json'),
       this.destinationPath(this.answers.module +'/src/i18n/pt-pt/resources.components.lang.json')
-    );
+    );*/
 	}
 	
   paths() {
