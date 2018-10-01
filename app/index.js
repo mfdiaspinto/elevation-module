@@ -37,6 +37,8 @@ module.exports = class extends Generator {
 			} // user answer `title` used
     );
 
+    
+    this.fs.copy('src/_index.ts', 'src/index.ts');
    /* this.fs.copyTpl(
       this.templatePath('src'),
       this.destinationPath(this.answers.module + 'src'),
