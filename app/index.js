@@ -44,12 +44,12 @@ module.exports = class extends Generator {
     );
 
     this.fs.copy(
-      this.templatePath('src/package.json'),
+      this.templatePath('src/_package.json'),
       this.destinationPath(this.answers.module +'/src/package.json')
     );
 
     this.fs.copy(
-      this.templatePath('src/tsconfig.es5.json'),
+      this.templatePath('src/_tsconfig.es5.json'),
       this.destinationPath(this.answers.module +'/src/tsconfig.es5.json')
     );
 
