@@ -24,7 +24,8 @@ module.exports = class extends Generator {
       this.destinationPath(this.answers.module + ''),
 			{ module: this.answers.module,
 				author :  this.answers.author,
-				email :  this.answers.email
+        email :  this.answers.email, 
+        version: this.answers.version
 			} // user answer `title` used
     );
    
@@ -105,6 +106,10 @@ module.exports = class extends Generator {
       type    : 'input',
       name    : 'email',
       message : 'Email:',
+    },{
+      type    : 'input',
+      name    : 'version',
+      message : 'Elevation version:',
     }]);
   }
   

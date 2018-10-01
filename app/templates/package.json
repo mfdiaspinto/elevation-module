@@ -79,7 +79,7 @@
   },
   "dependencies": {
     "@angular/http": "^6.1.8",
-    "@primavera/ngcore": "mainline",
+    "@primavera/ngcore": "<%= version %>",
     "ngx-bootstrap": "^3.0.1"
   }
 }

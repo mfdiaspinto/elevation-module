@@ -6,7 +6,7 @@ To install this library, run:
 
 
 ```bash
-$ npm install attachments --save
+$ npm install <%= module %> --save
 ```
 
 ## Consuming your library
@@ -14,7 +14,7 @@ $ npm install attachments --save
 Once you have published your library to npm, you can import your library in any Angular application by running:
 
 ```bash
-$ npm install attachments
+$ npm install <%= module %>
 ```
 
 and then from your Angular `AppModule`:
@@ -44,7 +44,7 @@ import { SampleModule } from '# <%= module %>';
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its attachments, directives and pipes in your Angular application:
+Once your library is imported, you can use its <%= module %>, directives and pipes in your Angular application:
 
 ```xml
 <!-- You can now use your library component in app.component.html -->

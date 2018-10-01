@@ -44,44 +44,47 @@ module.exports = class extends Generator {
       }
     );
 
-    var indexFile = this.fs.read("index.ts", {});
-    var importsTag = "//ImportComponents";
-    var exportsTag = "//ExportComponents";
-    var declarationsComponentsTag = "//DeclarationsComponents";
-    var entryComponents = "//ModuleExportComponents";
+    try {
+        var indexFile = this.fs.read("index.ts", {});
+   
+        var importsTag = "//ImportComponents";
+        var exportsTag = "//ExportComponents";
+        var declarationsComponentsTag = "//DeclarationsComponents";
+        var entryComponents = "//ModuleExportComponents";
 
-    if(indexFile.indexOf(importsTag) >= 0){
-      
-      var index = indexFile.indexOf(importsTag);
+        if(indexFile.indexOf(importsTag) >= 0){
+          
+          var index = indexFile.indexOf(importsTag);
 
-      indexFile = indexFile.slice(0, index + importsTag.length) + "\n import {" + name + "Component} from './" + nameCamelCase + "/" + nameCamelCase+ ".component';\n" + indexFile.slice(index + importsTag.length + Math.abs(0));
+          indexFile = indexFile.slice(0, index + importsTag.length) + "\n import {" + name + "Component} from './" + nameCamelCase + "/" + nameCamelCase+ ".component';\n" + indexFile.slice(index + importsTag.length + Math.abs(0));
+        }
+
+        if(indexFile.indexOf(exportsTag) >= 0){
+          
+          var index = indexFile.indexOf(exportsTag);
+
+          indexFile = indexFile.slice(0, index + exportsTag.length) + "\n export {" + name + "Component} from './" + name + "/" + nameCamelCase+ ".component';\n" + indexFile.slice(index + exportsTag.length + Math.abs(0));
+        }
+
+        if(indexFile.indexOf(declarationsComponentsTag) >= 0){
+          
+          var index = indexFile.indexOf(declarationsComponentsTag);
+
+          indexFile = indexFile.slice(0, index + declarationsComponentsTag.length) + "\n " + name + "Component,\t" + indexFile.slice(index + declarationsComponentsTag.length + Math.abs(0));
+        }
+
+        if(indexFile.indexOf(entryComponents) >= 0){
+          
+          var index = indexFile.indexOf(entryComponents);
+
+          indexFile = indexFile.slice(0, index + entryComponents.length) + "\n " + name + "Component,\t" + indexFile.slice(index + entryComponents.length + Math.abs(0));
+        }
+
+
+        this.fs.write("index.ts", indexFile);
+    } catch(error) {
+      this.log("can't find index.ts on project, add component to index.ts file.");
     }
-
-    if(indexFile.indexOf(exportsTag) >= 0){
-      
-      var index = indexFile.indexOf(exportsTag);
-
-      indexFile = indexFile.slice(0, index + exportsTag.length) + "\n export {" + name + "Component} from './" + name + "/" + nameCamelCase+ ".component';\n" + indexFile.slice(index + exportsTag.length + Math.abs(0));
-    }
-
-    if(indexFile.indexOf(declarationsComponentsTag) >= 0){
-      
-      var index = indexFile.indexOf(declarationsComponentsTag);
-
-      indexFile = indexFile.slice(0, index + declarationsComponentsTag.length) + "\n " + name + "Component,\t" + indexFile.slice(index + declarationsComponentsTag.length + Math.abs(0));
-    }
-
-    if(indexFile.indexOf(entryComponents) >= 0){
-      
-      var index = indexFile.indexOf(entryComponents);
-
-      indexFile = indexFile.slice(0, index + entryComponents.length) + "\n " + name + "Component,\t" + indexFile.slice(index + entryComponents.length + Math.abs(0));
-    }
-
-    this.log(indexFile);
-
-    this.fs.write("index.ts", indexFile);
-
     /*function (err, data) {
         if (err) {
             throw err;

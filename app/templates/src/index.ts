@@ -7,6 +7,7 @@ import { I18N_SOURCES } from 'i18n/i18n.config';
 
 //ExportComponents
 
+//ImportServices
 
 // create the i18n config
 
@@ -16,12 +17,15 @@ let i18nConfig: I18nConfig = {
   sources: I18N_SOURCES
 }
 
+
+export const primaveraCoreModule: ModuleWithProviders = PrimaveraCoreModule.forRoot();
+export const primaveraI18nModule: ModuleWithProviders = PrimaveraI18nModule.forRoot(i18nConfig);
+
 @NgModule({
   imports: [
     CommonModule,
-    PrimaveraCoreModule.forRoot(),
-    PrimaveraI18nModule.forRoot(i18nConfig)
-
+    primaveraCoreModule,
+    primaveraI18nModule
     //NemComponents
 
   ],
@@ -30,6 +34,10 @@ let i18nConfig: I18nConfig = {
 
   ], entryComponents: [
       
+  ],
+  providers : [
+    //ProvidersServices
+
   ],
   exports: [
     //ModuleExportComponents
