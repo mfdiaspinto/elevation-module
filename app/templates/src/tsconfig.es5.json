@@ -21,8 +21,8 @@
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
-    "flatModuleOutFile": "attachments.js",
-    "flatModuleId": "attachments"
+    "flatModuleOutFile": "<%= module %>.js",
+    "flatModuleId": "<%= module %>"
   },
   "files": [
     "./index.ts"

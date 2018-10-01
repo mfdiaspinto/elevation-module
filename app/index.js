@@ -28,13 +28,54 @@ module.exports = class extends Generator {
 			} // user answer `title` used
     );
 
-    this.fs.copyTpl(
+   /* this.fs.copyTpl(
       this.templatePath('src'),
       this.destinationPath(this.answers.module + 'src'),
 			{ module: this.answers.module,
 				author :  this.answers.author,
 				email :  this.answers.email
 			} // user answer `title` used
+    );*/
+
+
+    this.fs.copy(
+      this.templatePath('src/index.ts'),
+      this.destinationPath(this.answers.module +'/src/index.ts')
+    );
+
+    this.fs.copy(
+      this.templatePath('src/package.json'),
+      this.destinationPath(this.answers.module +'/src/package.json')
+    );
+
+    this.fs.copy(
+      this.templatePath('src/tsconfig.es5.json'),
+      this.destinationPath(this.answers.module +'/src/tsconfig.es5.json')
+    );
+
+    this.fs.copy(
+      this.templatePath('src/tsconfig.spec.json'),
+      this.destinationPath(this.answers.module +'/src/tsconfig.spec.json')
+    );
+
+    this.fs.copy(
+      this.templatePath('src/i18n/i18n.config.ts'),
+      this.destinationPath(this.answers.module +'/src/i18n/i18n.config.ts')
+    );
+
+    this.fs.copy(
+      this.templatePath('src/i18n/en-us/resources.components.lang.json'),
+      this.destinationPath(this.answers.module +'/src/i18n/en-us/resources.components.lang.json')
+    );
+
+    this.fs.copy(
+      this.templatePath('src/i18n/es-ES/resources.components.lang.json'),
+      this.destinationPath(this.answers.module +'/src/i18n/es-ES/resources.components.lang.json')
+    );
+
+    this.fs.copy(
+      this.templatePath('src/i18n/pt-pt/resources.components.lang.json'),
+      this.destinationPath(this.answers.module +'/src/i18n/pt-pt/resources.components.lang.json')
     );
 	}
 	

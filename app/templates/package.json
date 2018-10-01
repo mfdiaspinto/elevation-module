@@ -31,13 +31,16 @@
     "url": "https://github.com/username/repo/issues"
   },
   "devDependencies": {
-    "@angular/common": "^5.0.0",
-    "@angular/compiler": "^5.0.0",
-    "@angular/compiler-cli": "^5.0.0",
-    "@angular/core": "^5.0.0",
-    "@angular/platform-browser": "^5.0.0",
-    "@angular/platform-browser-dynamic": "^5.0.0",
-    "@compodoc/compodoc": "^1.0.0-beta.10",
+    "@angular/common": "^6.1.8",
+    "@angular/compiler": "^6.1.8",
+    "@angular/compiler-cli": "^6.1.8",
+    "@angular/core": "^6.1.8",
+    "@angular/platform-browser": "^6.1.8",
+    "@angular/platform-browser-dynamic": "^6.1.8",
+    "@angular/forms": "^6.1.8",
+    "@angular/http": "^6.1.8",
+    "@angular/router": "^6.1.8",
+    "@compodoc/compodoc": "^1.1.5",
     "@primavera/ngcore": "mainline",
     "@types/jasmine": "2.5.53",
     "@types/node": "~6.0.60",
@@ -45,7 +48,7 @@
     "codelyzer": "~3.2.0",
     "concurrently": "^3.4.0",
     "core-js": "^2.4.1",
-    "del": "^2.2.2",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
     "gulp-rollup": "^2.15.0",
@@ -68,15 +71,15 @@
     "systemjs": "^0.20.12",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
-    "typescript": "~2.4.2",
+    "typescript": "~2.9.2",
     "zone.js": "^0.8.14"
   },
   "engines": {
     "node": ">=6.0.0"
   },
   "dependencies": {
-    "@angular/http": "^5.1.1",
+    "@angular/http": "^6.1.8",
     "@primavera/ngcore": "mainline",
-    "ngx-bootstrap": "^2.0.0-rc.0"
+    "ngx-bootstrap": "^3.0.1"
   }
 }
