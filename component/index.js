@@ -85,17 +85,6 @@ module.exports = class extends Generator {
     } catch(error) {
       this.log("can't find index.ts on project, add component to index.ts file.");
     }
-    /*function (err, data) {
-        if (err) {
-            throw err;
-        }
-        content = data;
-    
-        // Invoke the next step here however you like
-        this.log(content);
-
-        //processFile();          // Or put the next step in a function and invoke it
-    } );*/
 	}
 	
   paths() {
