@@ -1,17 +1,16 @@
 # elevation-module
-Build elevation module
+##Create elevation module
 
 yo elevation-module 
 
-
-new component
+## Add new component
 
 yo elevation-module: component
 
-new web component
+## Add new web component
 
 yo elevation-module: web-component
 
-new service
+## Add new service
 
 yo elevation-module: service
