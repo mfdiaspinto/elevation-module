@@ -109,11 +109,11 @@ module.exports = class extends Generator {
     },{
       type    : 'input',
       name    : 'path',
-      message : 'Add path to index ts:',
+      message : 'Add path to index.ts:',
     }]);
   }	
 
   end() {
-    this.log("NEW ", this.answers.name, " Component Added! :)");
+    this.log("NEW ", this.answers.name, " WebComponent Added! :)");
   }
 };

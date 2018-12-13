@@ -6,16 +6,6 @@ module.exports = class extends Generator {
 	constructor(args, opts) {
 		// Calling the super constructor is important so our generator is correctly set up
 		super(args, opts);
-
-		// Next, add your custom code
-	/*	this.helperMethod = function () {
-			console.log('won\'t be called automatically');
-		};
-		 this.argument('appname', { type: String, required: true });
-
-		// And you can then access it later; e.g.
-		this.log(this.options.appname);
-  */
  	}
 	
 	writing() {
@@ -28,55 +18,6 @@ module.exports = class extends Generator {
         version: this.answers.version
 			} // user answer `title` used
     );
-   
-   /* this.fs.copyTpl(
-      this.templatePath('src'),
-      this.destinationPath(this.answers.module + 'src'),
-			{ module: this.answers.module,
-				author :  this.answers.author,
-				email :  this.answers.email
-			} // user answer `title` used
-    );*/
-
-    /*this.fs.copy(
-      this.templatePath('src/_index.ts'),
-      this.destinationPath(this.answers.module +'/src/index.ts')
-    );
-
-    this.fs.copy(
-      this.templatePath('src/_package.json'),
-      this.destinationPath(this.answers.module +'/src/package.json')
-    );
-
-    this.fs.copy(
-      this.templatePath('src/_tsconfig.es5.json'),
-      this.destinationPath(this.answers.module +'/src/tsconfig.es5.json')
-    );
-
-    this.fs.copy(
-      this.templatePath('src/tsconfig.spec.json'),
-      this.destinationPath(this.answers.module +'/src/tsconfig.spec.json')
-    );
-
-    this.fs.copy(
-      this.templatePath('src/i18n/i18n.config.ts'),
-      this.destinationPath(this.answers.module +'/src/i18n/i18n.config.ts')
-    );
-
-    this.fs.copy(
-      this.templatePath('src/i18n/en-us/resources.components.lang.json'),
-      this.destinationPath(this.answers.module +'/src/i18n/en-us/resources.components.lang.json')
-    );
-
-    this.fs.copy(
-      this.templatePath('src/i18n/es-ES/resources.components.lang.json'),
-      this.destinationPath(this.answers.module +'/src/i18n/es-ES/resources.components.lang.json')
-    );
-
-    this.fs.copy(
-      this.templatePath('src/i18n/pt-pt/resources.components.lang.json'),
-      this.destinationPath(this.answers.module +'/src/i18n/pt-pt/resources.components.lang.json')
-    );*/
 	}
 	
   paths() {
@@ -114,6 +55,6 @@ module.exports = class extends Generator {
   }
   
   end() {
-    this.log("Module Elevation 4 criado!!!");
+    this.log("NEW Elevation Modulo(Angular 6) ;)");
   }
 };
