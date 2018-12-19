@@ -63,7 +63,7 @@ module.exports = class extends Generator {
           
           var index = indexFile.indexOf(exportsTag);
 
-          indexFile = indexFile.slice(0, index + exportsTag.length) + "\n export {" + name + "Component} from './" + name + "/" + nameCamelCase+ ".component';\n" + indexFile.slice(index + exportsTag.length + Math.abs(0));
+          indexFile = indexFile.slice(0, index + exportsTag.length) + "\n export {" + name + "Component} from './" + nameCamelCase + "/" + nameCamelCase+ ".component';\n" + indexFile.slice(index + exportsTag.length + Math.abs(0));
         }
 
         if(indexFile.indexOf(declarationsComponentsTag) >= 0){

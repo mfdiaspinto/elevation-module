@@ -2,7 +2,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PrimaveraCoreModule, PrimaveraI18nModule, I18nConfig } from '@primavera/ngcore';
 
-import { I18N_SOURCES } from 'i18n/i18n.config';
+import { I18N_SOURCES } from './i18n/i18n.config';
 //ImportComponents
 
 //ExportComponents
