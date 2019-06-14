@@ -6,6 +6,7 @@ var gulp = require('gulp'),
   rename = require('gulp-rename'),
   del = require('del'),
   runSequence = require('run-sequence'),
+  chmod = require('gulp-chmod'),
   inlineResources = require('./tools/gulp/inline-resources');
 
 const rootFolder = path.join(__dirname);
@@ -31,6 +32,7 @@ gulp.task('clean:dist', function () {
  */
 gulp.task('copy:source', function () {
   return gulp.src([`${srcFolder}/**/*`, `!${srcFolder}/node_modules`])
+    .pipe(chmod(666))
     .pipe(gulp.dest(tmpFolder));
 });
 
@@ -51,7 +53,7 @@ gulp.task('inline-resources', function () {
  *    As of Angular 5, ngc accepts an array and no longer returns a promise.
  */
 gulp.task('ngc', function () {
-  ngc([ '--project', `${tmpFolder}/tsconfig.es5.json` ]);
+  ngc(['--project', `${tmpFolder}/tsconfig.es5.json`]);
   return Promise.resolve()
 });
 
@@ -61,7 +63,7 @@ gulp.task('ngc', function () {
  */
 gulp.task('rollup:fesm', function () {
   return gulp.src(`${buildFolder}/**/*.js`)
-  // transform the files here.
+    // transform the files here.
     .pipe(rollup({
 
       // Bundle's entry point
@@ -94,7 +96,7 @@ gulp.task('rollup:fesm', function () {
  */
 gulp.task('rollup:umd', function () {
   return gulp.src(`${buildFolder}/**/*.js`)
-  // transform the files here.
+    // transform the files here.
     .pipe(rollup({
 
       // Bundle's entry point
@@ -200,7 +202,7 @@ gulp.task('compile', function () {
     'copy:build',
     'copy:manifest',
     'copy:readme',
-    'copy:languageresources',    
+    'copy:languageresources',
     'clean:build',
     'clean:tmp',
     function (err) {
