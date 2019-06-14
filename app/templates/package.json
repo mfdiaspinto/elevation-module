@@ -13,7 +13,8 @@
     "lite": "lite-server",
     "playground:build": "tsc -p playground -w",
     "playground": "concurrently \"npm run build:watch\" \"npm run playground:build\" \"npm run lite\"",
-    "test": "tsc && karma start"
+    "devtest": "ng test",
+    "test": "ng test --watch=false --browsers ChromeHeadless --code-coverage=true"
   },
   "repository": {
     "type": "git",
@@ -50,6 +51,7 @@
     "core-js": "^2.4.1",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
+    "gulp-chmod": "^2.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-rollup": "^2.15.0",
     "jasmine-core": "~2.6.2",
@@ -60,6 +62,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-mocha-reporter": "^2.2.5",
     "lite-server": "^2.3.0",
     "node-sass": "^4.5.2",
     "node-sass-tilde-importer": "^1.0.0",
@@ -78,6 +81,7 @@
     "node": ">=6.0.0"
   },
   "dependencies": {
+    "@angular-devkit/build-angular": "^0.8.4",
     "@angular/http": "^6.1.8",
     "@primavera/ngcore": "<%= version %>",
     "ngx-bootstrap": "^3.0.1"

@@ -6,6 +6,7 @@ npm-debug.log
 src/*.js
 src/*.map
 src/*.d.ts
+!src/karma.conf.js
 
 # JetBrains
 .idea
